@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>break dan continue</title>
+</head>
+<body>  
+    <script>    
+// break digunakan untuk menghentikan perulangan
+let i=1;
+while(true){
+    document.writeln(`<p>ngulang ke-${i}</p>`);
+    i++;
+    if(i > 5){
+        break; // menghentikan perulangan
+    }
+
+}
+
+//continue untuk menghentikan perulangan saat ini dan melanjutkan perulangan berikutnya
+document.writeln(`<h3>perulangan genap menggunakan continue</h3>`);
+
+for(let j=1;j <= 10;j++){
+  
+    if(j % 2 === 1){ //membuat looping bilangan genap
+        continue;
+    }
+      document.writeln(`<p>Perulangan ke-${j}</p>`);
+}
+
+document.writeln(`<h3>perulangan ganjil menggunakan continue</h3>`);
+
+for(let k=1;k <= 10;k++){
+  
+    if(k % 2 === 0){ //membuat looping bilangan ganjil
+        continue;
+    }
+      document.writeln(`<p>Perulangan ke-${k}</p>`);
+}
+    </script>
+</body>
+</html>

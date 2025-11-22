@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Destructuring Example</title>
+</head>
+<body>
+    <h1>JavaScript Destructuring Assignment</h1>
+    <pre id="output"></pre>
+    <script>
+       //destructuring mengambil value dalam object atau array
+
+    
+    const hero = ["lancelot","kagura","zhuxin"];
+    const[cowo,cewe,lesbi] =hero //ini adalah cara destructuring
+    
+    console.info(cowo)
+    console.info(cewe)
+    console.info(lesbi)
+
+    //menggunakan nilai default
+    //nilai default akan diambil jika tidak ada penetapan nilai pada variabel
+    const nama ={
+        firstname :"agi",
+        lastname : "ghifary"
+    }
+
+    const{firstname,middlename = "Al",lastname}= nama //nilai default dengan (=)
+
+     console.info(firstname)
+    console.info(middlename)
+    console.info(lastname)
+
+    //gunakan nama lain
+     const namaLengkap ={
+        Firstname :"Nouval",
+        Middlename :"Al",
+        Lastname : "ghifary"
+    }
+
+    const{Firstname : pertama ,Middlename : kedua,Lastname : ketiga}= namaLengkap //nama object dapat diganti
+
+     console.info(pertama)
+    console.info(kedua)
+    console.info(ketiga)
+
+
+
+    </script>
+</body>
+</html>

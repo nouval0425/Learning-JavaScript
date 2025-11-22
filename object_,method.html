@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object method</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        //object method itu adalah function didalam object
+
+        const person={
+            name :"nouval",
+            sayHello: function(name){
+                alert(`Hello ${name}`)
+            }
+        };
+
+    //untuk memanggilnya seperti dibawah
+        person.sayHello("agi");
+
+    //atau juga dengan cara yang satu lagi
+    //jika object sudah terlanjur dibuat dan ingin menambahkan function didalamnya
+        const hero ={
+            mage : "nana",
+            fighter : "arlot"
+        }
+
+    //seperti dibawah ini
+        hero.Hello = function(name){
+            document.writeln(`hello ${name}`);
+        }
+
+        hero.Hello("lancelot");
+
+
+    </script>
+   
+</body>
+</html>

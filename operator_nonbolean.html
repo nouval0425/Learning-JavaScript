@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>operator logika non bolean</title>
+</head>
+<body>
+<script>    
+
+// operator logika non bolean adalah operator yang digunakan untuk mengecek kondisi
+//biasanya operator digunakan untuk nilai boolean namun pada JS hal ini juga dapat ke diapakai untuk non boolean
+
+    //falsy mengecek yag truthy duluan
+    //jika kedua kondisi false maka akan diambil nilai terakhir
+    console.info("nama"||"");//"nama"
+    console.info(""||"nama"); // "nama"
+    console.info(0||"nol"); // "nol"
+    console.info(0||""); // ""
+    console.info(""||false)//false
+
+    //truthy mengecek yang falsy duluan
+    //jika kedua kondisi true maka akan diambil nilai terakhir
+    console.info("nama"&&"");//""
+    console.info(""&&"nama"); // "" 
+    console.info(0&&"nol"); // 0
+    console.info(false&& "")//false
+    console.info("aku" && "kamu")//"kamu"
+
+    //contoh penggunaannya (||)
+
+    const person={
+        firstname:"",
+        lastname:"widodo",
+    };
+
+    //jika firstname kosong makan akan diambil lastname
+    const nama =person.firstname || person.lastname || "tanpa nama";
+    console.info(`nama : ${nama}`);
+
+
+</script>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>javascript Array</title>
+</head>
+<body>
+    <script>
+// Array adalah tipe data yang digunakan untuk menyimpan beberapa nilai dalam satu variabel
+//dalam javascript array bebas dimasukin berapapun indexnya
+//deklarasi array []
+//asosatif array indexnya dapat berisi string
+        let hero=["kagura","balmond","phoveus"];
+
+        console.info(hero);
+        console.table(hero);//menampilkan array di console dalam bentuk tabel
+        console.log(hero[0]); //mengakses elemen pertama dari array
+        console.log(hero[1]); //mengakses elemen kedua dari array
+        console.log(hero[2]); //mengakses elemen ketiga dari
+
+document.writeln(`<p> ${hero} </p>`);
+
+        //menambahkan array
+        const nama=[];
+        nama.push("athar");
+        nama.push("agi");
+        nama.push("apta");
+        nama.push(1,2,3,4,5);
+        console.table(nama);
+        document.writeln(`<p> ${nama} </p>`);
+
+        //cara tau panjang array array.length
+        console.info(nama.length);
+        document.writeln(`<p> panjang array adalah ${nama.length} </p>`);
+
+        //mengubah isi array array[index]=value
+        nama[0]="sabda";
+        console.table(nama);
+        document.writeln(`<p> ${nama} </p>`);
+
+        //delete menghapus elemen array
+        delete nama[1];//menghapus elemen pada index ke 3
+        console.table(nama);
+        document.writeln(`<p> ${nama} </p>`);
+        nama[1]="usus";
+        console.table(nama);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

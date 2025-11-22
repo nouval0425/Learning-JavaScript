@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8" />
+    <title>Scope Example</title>            
+    
+    </head>
+<body>
+    <script>
+        //dalam javascript dari sudut pandang pengambilan variabel dibagi 2
+        //local variabel
+        //global variabel
+
+        let manusia ="nouval al ghifary"; //global variabel
+
+        function say(){
+            let person ="hello adam"; //local variabel
+            return person;
+
+        }
+
+        function hello(){
+            let insan = "mas adam"; //local variabel
+            return insan ;
+
+        }
+
+        //local variabel hanya dapat dipanggil di dalamnya tidak dapat diluarnya
+        //global dapat dipanggil dimana saja
+
+        //document.writeln(insan);  ----> tidak dapat dipanggil
+
+        
+        document.writeln(say());
+        document.writeln(hello());
+
+
+        </script>
+        </body>
+</html>

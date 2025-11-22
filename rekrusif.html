@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Function recrusif</title>
+
+</head>
+<body>
+    <script>
+        function genap (value){
+            if(value <=0)return "<br> " ;
+
+            if(value % 2 ===1){
+
+                document.writeln(value)
+            }
+            return genap(value -1);
+        }
+
+        function ganjil (value){
+            if(value <=0)return "<br> " ;
+
+            if(value % 2 ===0){
+
+                document.writeln(value)
+            }
+            return ganjil(value -1);
+        }
+
+        let hitung =genap(20);
+        document.writeln(`${hitung}`);
+
+        let hitungg =ganjil(20);
+        document.writeln(`${hitungg}`);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kata kunci "this"</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color: bisque;">
+    <script>
+        //kata kunci this digunakan untuk refrensi ke objeckt
+        //jika kata kunci this digunakan di function dan global scope maka refrensinya akan ke window
+        //namun jika this digunakan dalam object makan refrensinya akan ke object
+
+        console.info(this); //refrensiny ke window
+
+        function sayHello(name){
+            console.info(this); //le window juga
+
+
+        }
+
+        const person ={
+            name :"supriyadi priyatman",
+            Hello :function(value){
+                console.info(`perkenalkan nama saya ${this.name} biasa dipanggil ${value}`)
+            }   //refrensinya ke object name
+        }
+        person.Hello("udin");
+
+
+
+    </script>
+    
+</body>
+</html>

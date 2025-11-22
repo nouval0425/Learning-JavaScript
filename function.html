@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <meta charset="UTF-8" />
+    <title>Function Example</title>
+</head>
+<body>
+    <script>
+    document.writeln(`<h3>Function Example</h3>`);
+    // Function declaration
+    //function tanpa parameter
+    function printHello(){
+        document.writeln(`<p>Hello, World!</p>`);
+    };
+
+    printHello();
+    printHello();
+
+    //function dengan parameter
+    document.writeln(`<h3>ini function dengan parameter</h3>`);
+    function hello(name,age){
+        document.writeln(`Hello my name is <strong>${name}</strong> and I am <strong>${age}</strong> years old.<br>`);
+    }
+
+    hello("asep",20);
+    hello("budi",30);
+
+    //function dengan return
+    document.writeln(`<h3>ini function dengan return</h3>`);
+    function jumlah(a,b){
+        return a+b;
+    }
+
+    const hasil =jumlah(20,30);
+    document.writeln(`<p>Hasil = ${hasil}</p>`);
+
+    //contoh return pada array
+        function array(index,element){
+            for (let i of index){
+                console.info(i);
+                if(i === element ){
+                return true;
+          }
+            }
+            return false;
+        }
+
+        const angka=[1,2,3,4,5,6,7];
+        const result =array(angka,4);
+        document.writeln(`<p> ${result}</p>`);
+
+        //function juga dapat menjadi value
+
+        function hello(nama){
+            document.writeln(`<p>hello nama saya ${nama}</p>`);
+        }
+
+
+        let say =hello;
+        hello("agi");
+        say("nouval");
+        
+        //bisa juga function didalam parameter
+        function hai(call){
+            call("budi");
+        }
+        
+        hai(hello);
+        hai(say);
+
+
+        //anonymus function
+        //function yang tidak menggunakan nama
+
+        //function didalam variabel
+        let halo =function (name){
+            document.writeln(`<p>halo ${name}</p>`); 
+        }
+
+        halo("giyu");
+
+        //function didalam function
+
+        function huhu(name){
+            name("mas budi");
+        }
+
+        huhu(function(nama){
+            document.writeln(`halo ${nama}`)
+        },function(nama){
+            document.writeln(`boleh juga ${nama}`)
+        });
+
+
+        //rekrusif function ialah function yang memanngil function itu sendiri
+        //contoh yg bukan rekrusif
+        function ganjil(value){
+
+            let hasil=0;
+
+            for (let i =1;i <= value; i++) {
+                if(i % 2 === 1){
+                    hasil += i + " ";
+                    
+                }
+            }
+            return hasil;
+        }
+
+        let hitung =ganjil(20);
+        document.writeln(`<p>${hitung}</p>`);
+
+        //contoh dengan rekrusif
+        function ganjill(value){
+            if(value <= 0)return ; // untuk deret
+
+            if(value % 2  === 1){
+                document.writeln(value);
+            }
+             ganjill(value -1);
+        }
+
+        //latihan rekrusif
+        function genap(value){
+            if(value <= 0)return ; //agar deret hanya samapi 0
+
+            if(value % 2 === 1){
+                document.writeln(value) ;
+            }
+             genap(value -1);   
+            
+        }
+
+        let hitunggenap= genap(10);
+        document.writeln(`${hitunggenap}`);
+
+        let hitungg = ganjill(20);
+        document.writeln(`${hitungg}`);
+
+    </script>
+</body>
+</html>

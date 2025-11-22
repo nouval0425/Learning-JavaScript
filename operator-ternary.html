@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>ternary operator</title>
+</head>
+<body>
+    <script>
+        //ternary operator seperti if statement namun lebih singkat
+        //kegunaannya untuk mengecek kondisi lebih simpel
+        let nilai =prompt("berpa nilai rata rata anda");;
+        let ucapan;
+
+    //jika menggunakan if statement
+        if(nilai >=75){
+            ucapan = "selamat anda lulus";
+        }else{
+            ucapan = "maaf anda tidak lulus";
+        }
+
+        alert(`${ucapan}`);
+        console.info(ucapan);
+        document.writeln(`<p> ${ucapan}</p>`);
+
+    //menggunakan ternary operator
+    //jadi lebih simpel
+   ucapan = nilai >= 75? " lulus cuy" : "sory yee";
+
+    alert(`${ucapan}`);
+     console.info(ucapan);
+     document.writeln(`<p> ${ucapan}</p>`);
+
+    
+       
+
+
+
+    </script>
+</body>
+</html>

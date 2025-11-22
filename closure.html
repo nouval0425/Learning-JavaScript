@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF-8" />
+    <title>closure</title>
+
+    </head>
+    <body>
+        <script>
+            //closure berfungsi untuk mrnggunakan locak scope
+
+            function say(value){
+                const owner =`agi`;
+
+                function hello(param){
+                    console.info(owner);
+                    return value + param
+                }
+                return hello;
+            }
+
+            let addOne = say(1); // value
+            //function addOne(param){
+            //console.info(`agi`)
+            //return 1 + param
+            //}
+            document.writeln(`<p>${addOne(10)}</p>`) //1 + 10 / value + param
+
+            let addTwo = say(2); //value
+            document.writeln(addTwo(20)) //2 + 20 / value + param
+
+
+        </script>
+
+    </body>
+</html>

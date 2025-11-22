@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>undefined</title>
+</head>
+<body>
+    <script>
+        //undefined adalah tipe data yang digunakan untuk variabel yang belum diinisialisasi
+        let nama;
+        if(nama === undefined){
+            console.info("UNDIFINED");
+            alert("UNDIFINED");
+            document.writeln("<p> nama : UNDIFINED </p>");
+        }else{
+            console.info(`Nama : ${nama}`);
+            alert(`Nama : ${nama}`);
+            document.writeln(`<p> Nama : ${nama} </p>`);
+        }
+
+        //null adalah tipe data yang digunakan untuk variabel yang sengaja di kosongkan
+        let umur = null;
+
+        if(umur === undefined){
+            console.info("UNDIFINED");
+            alert("UNDIFINED");
+            document.writeln("<p> umur : UNDIFINED </p>");
+
+        }else if(umur === null){
+            console.info("NULL");
+            alert("NULL");
+            document.writeln("<p> umur : NULL </p>");
+        }
+        
+
+
+    </script>
+</body>
+</html>

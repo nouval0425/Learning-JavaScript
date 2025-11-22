@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Rest Parameter Example</title>
+</head>
+<body>
+    <script>
+        //rest parameter digunakan untuk memberikan nilai sebanyka banykanya
+        //rest parameter harus diletakan diakhir
+        //mengunakan ... sebelum nama parameternya
+        
+        //seperti ini contohya
+    document.writeln("<h2>Rest parameter</h2>");
+    function totalBuah(nama, ...jumlah){
+        let hasil =0;
+        
+
+        for (const total of jumlah) {
+            hasil +=total;
+           
+        }
+ document.writeln(`<P>buah <strong>${nama}</strong> price is ${hasil} ceunah</p>`);
+    }
+
+    totalBuah("apple",2,3,2,3,2,1,2);
+    totalBuah("melon",10,20,30,40,50);
+    //bagaimana jika dengan array?
+    //gunakan spread parameter
+
+
+    const hashira =[2,3,4,5,6,7,8];
+    totalBuah("hashira",...hashira);    //sebelum variabel array gunakan ... nama array
+
+    
+
+
+    </script>
+
+
+
+    </body>
+</html>

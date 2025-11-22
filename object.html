@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>asosatif array / object</title>
+</head>
+<body>
+    <script>
+// Object adalah tipe data yang digunakan untuk menyimpan data dalam bentuk pasangan key-value attribut dan properties
+//object menggunaka  tanda  { };
+   const anime = {};
+
+   //ubah atribute
+   anime["judul"] ="one piece";
+   anime["genre"] ="adventure";
+    anime["tahun"] = 1999;
+
+    console.table(anime);
+    //bisa dengan secara langsung
+    const hero = {
+        nama:"alucard",
+        role:"fighter",
+        gender:"LK"
+    };
+
+    console.table(hero);
+
+    console.info(`Nama : ${hero.nama}`);
+    console.info(`role : ${hero.role}`);
+    console.info(`gender : ${hero.gender}`);
+    
+    document.writeln(`<p> Nama : ${hero.nama} </p>`);
+    document.writeln(`<p> role : ${hero.role} </p>`);   
+    document.writeln(`<p> gender : ${hero.gender} </p>`); 
+
+
+
+    </script>
+</body>
+</html>

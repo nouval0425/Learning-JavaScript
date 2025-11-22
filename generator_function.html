@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8" />
+    <title>Function generator</title>
+    </head>
+    <body>
+
+<script>
+    //generator function itu iterasi array
+    //penulisannya tambahkan * setelah function
+    //harus diakhiri dengan yield
+    //generator sifatnya lazy
+
+
+    function* nama(){
+yield "nouval";
+yield "al";
+yield "ghifary";
+    }
+
+    let nouval =nama();
+    for (const i of nouval) {
+        console.info(i);
+        
+    }
+
+    function* ganjil(value){
+        for(let i=1;i <=value ; i++){
+            if(i % 2 === 1){
+                console.info(`yield ${i}`)
+                yield i;
+            }
+        }
+    }
+
+    let hitung = ganjil(20);
+   // for (const number of hitung) {
+    //     console.info(number);}
+
+    //generator juga dapat diatur apa yang dapat diambil dan tidak dengan next
+    console.info(hitung.next().value);
+  
+</script>
+
+
+    </body>
+</html>

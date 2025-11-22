@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF-8" />
+    <title>arrow function</title>
+    </head>
+    <body>
+        <script>
+            //arrow function itu seperti anonymus function yang tidak dapat berdiri sendiri
+            //menggunakan tanda => seperti arrow
+
+        let namaLengkap =(nama) =>{
+            let say =`<p>hello ${nama}</p>`;
+            document.writeln(say);
+        }
+        namaLengkap(`nouval al ghifary`);
+
+        //arrow function dengan pengembalian nilai
+        let sum =(first,seccond) => {
+        return first + seccond;
+    }
+         document.writeln(`<p>${sum(10,10)}</p>`)
+
+        //arrow function juga dapat tidak menggunakan kurung kurawal jika
+        //kode hanya satu baris
+        let hero =(nama) => document.writeln(`<p>hello ${nama}</p>`);
+        hero(`hayabusa`);
+
+        //jika dengan return makan tidak perlu menulis return jika satu baris
+        let hitung =(first,seccond) => first + seccond;
+        document.writeln(`<p>${hitung(10,10)}</p>`)
+
+        //arrow function juga bisa tanpa () jika parameter hanya satu
+        let Hero = nama => document.writeln(`<p>hello ${nama}</p>`);
+        Hero(`lanceelot`);
+
+        //arrow function juga dapat dijadikan parameter
+        function call(callback){
+            callback(`al ghifary`);
+        }
+
+        //ini yg anonymus function
+        call(function (nama){
+            document.writeln(`<p>hai ${nama}</p>`)
+        })
+
+
+        //seperti dibawah ini
+        call((nama)=> document.writeln(`hello ${nama}`));
+
+        
+
+
+        </script>
+    </body>
+
+</html>

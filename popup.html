@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>pop up</title>
+</head>
+<body>
+    <script>
+// Pop up adalah jendela kecil yang muncul di atas halaman web utama
+//alert untuk peringatan
+//confirm untuk konfirmasi
+//prompt untuk meminta input dari pengguna
+
+//alert
+        alert("selamat datang user pintar")
+
+//prompt
+        const nama=prompt("nama lu siapa?");
+        console.info(`Nama : ${nama}`);
+        alert(`selamat datang ${nama}`);
+
+//confirm
+        
+        const enter =confirm(`apakah kamu yakin mau masuk mas ${nama} ? `);
+        if(enter){
+            const soal=prompt("1 + 1 = ?")
+            
+            if(soal == 2){  
+                console.info(`selamat ${nama} kamu berhasil`);
+                alert(`selamat ${nama} kamu berhasil`);
+
+            }else{
+                console.info(`kocak ${nama} wwkwk`);
+                alert(`kocak kaga bisa lu ${nama} wwkwk`);
+            }
+
+        }else{
+            alert(`bye bye ${nama}`);
+        }
+       
+
+
+
+    </script>
+</body>
+</html>

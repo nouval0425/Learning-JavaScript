@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getter dan Setter di JavaScript</title>
+</head>
+<body>
+    <script>
+        //dalam javascript getter dan setter juga ada
+
+    const person={
+        firstName :"Nouval",
+        lastName :"Al Ghifary",
+        get fullName(){
+            return `${this.firstName} ${this.lastName}`;//menggunakan get
+            
+        },
+        set namaLengkap(value){
+            const array=value.split(" ");
+            this.firstName=array[0];
+            this.lastName=array[1];
+        }
+
+    }
+
+    person.namaLengkap="eko setiawan";
+    console.table(`${person.fullName}`)
+
+    person.namaLengkap="lencelot mungil sangat"
+    console.table(`${person.fullName}`)
+
+    person.namaLengkap="iki widodo epep"
+    console.table(`${person.fullName}`)
+
+//kesimpulannya ialah dijavascript getter dan setter juga ada seperti dibahsa yg lain namun dalam 
+//javascript hal ini tik terlalu populer dikalangan programer javascript 
+//getter menggunakan kata kunci get dan 
+//setter menggunakan kata knuci set
+
+
+
+    </script>
+
+
+</body>
+</html>

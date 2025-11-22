@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template Example</title>
+</head>
+<body>
+    <script>
+        //konversi string ke number
+        //parseInt() untuk mengkonversi string ke integer
+        //parseFloat() untuk mengkonversi string ke desimal
+        //Number() untuk mengkonversi string ke number (bisa integer atau desimal)
+
+        const a= parseInt("1");
+        const b=1;
+        const total=`${a+b}`;
+        const notnumber=a.toString() + b.toString(); //mengkonversi number ke string
+
+        document.writeln(`<p>${notnumber}</p>`);
+        document.writeln(`<p> hasil dari ${a} + ${b}adalah ${total} </p>`); //menggunakan template literal untuk menyisipkan variabel ke dalam string
+
+        document.writeln(`<p>${parseInt("1.9")}</p>`);
+        document.writeln(`<p>${parseFloat("1.1")}</p>`)
+        document.writeln(`<p>${Number("1.4")}</p>`);
+
+        //NaN (Not a Number) adalah hasil dari operasi yang tidak valid
+        document.writeln(`<p>${parseInt("1salah")}</p>`);//bukan NaN karena mengabaikan belakang
+        document.writeln(`<p>${parseFloat("1.1ucup")}</p>`)//bukan NaN karena mengabaikan belakang
+        document.writeln(`<p>${Number("1.4agus")}</p>`);//NaN
+
+        //function isNaN() untuk mengecek apakah nilai adalah NaN
+        const nilai=parseInt("buaya")
+        const isnilai=`${nilai + 100}`
+
+        document.writeln(`<p>${isNaN(isnilai)}</p>`); //NaN karena tidak valid / bukan angka
+        document.writeln(`<p>${isNaN(nilai)}</p>`); //true karena NaN
+        document.writeln(`<p>${isNaN(100)}</p>`); //false karena 100 adalah nomor valid
+
+        </script>
+    </body>
+</html>

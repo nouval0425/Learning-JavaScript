@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>switch statement</title>
+</head>
+<body>
+    <script>
+   //switch statement ssama sepeerti if statement
+    let day = prompt("masukan hari dalam angka (1 - 6)") ;
+    let theday;
+
+    switch (day){
+        case "1" :
+            theday ="sunday";
+            break;
+        case "2" :
+            theday ="monday";
+            break;
+        case "3" :
+            theday ="tuesday";
+            break;
+        case "4" :
+            theday ="wednesday";
+            break;
+        case "5" :
+            theday ="thursday";
+            break;
+        case "6" :
+            theday ="friday";
+            break;
+        default:
+            theday ="day not valid";
+            break;
+
+    }
+    console.info(`hari ini adalah hari : ${theday}`);
+    document.writeln(`hari ini adalah hari : ${theday}`);
+    alert(`hari ini adalah hari : ${theday}`);
+
+    //in operator untuk mengecek apakah suatu property ada pada object
+    let person = {
+        name :"juki",
+        lahir : 2000,
+        domisili : "jawa"
+    };
+
+    if("name" in person){                             //mengecek property harus dengan petik 2 / string
+        console.info( `<p> hello ${person.name}</p>`);
+        document.writeln(`<p> hello ${person.name}</p>`);
+    }else{
+        console.info("<p> hello </p>");
+        document.writeln("<p> hello </p>");
+    }
+
+    //typeof operator untuk mengecek tipe data dari suatu variable
+    //typeof memiliki 2 nilai true / false
+    //typeof memiliki 7 tipe data : number, string, boolean, object, function, undefined, symbol
+    let data = prompt("masukan apa saja");
+
+if (data === null) {
+    console.info("<p> data : null </p>");
+    document.writeln("<p> data : null </p>");
+} else if (data.toLowerCase() === "true" || data.toLowerCase() === "false") {
+    console.info("<p> data : boolean </p>");
+    document.writeln("<p> data : boolean </p>");
+} else if (!isNaN(data) && data.trim() !== "") {
+    console.info("<p> data : number </p>");
+    document.writeln("<p> data : number </p>");
+} else {
+    console.info("<p> data : string </p>");
+    document.writeln("<p> data : string </p>");
+}
+
+    </script>
+</body>
+</html>

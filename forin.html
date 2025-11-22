@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <meta charset="UTF-8" />
+    <title>for in looping</title>
+
+</head>
+<body>
+    <script>
+        // for in digunakan untuk mengulangi properti dari objek
+        //contoh objek
+        document.writeln(`<h3>for in looping</h3>`);
+
+        const person={
+            firstname :"noouval",
+            middlename :"al",
+            lastname :"ghifary"
+        };
+
+        for (const key in person){
+            document.writeln(`<p>${key} : ${person[key]}</p>`);
+        }
+
+        //contoh array
+        const food = ["chicken","fish","meat","egg"];
+        for (const index in food){
+            document.writeln(`<p>${index} : ${food[index]}</p>`)
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.Box{
+    margin-left: 28%;
+    width: 45%;
+    padding: 5px;
+    border: 2px black solid;
+    border-radius: 10px;
+    background-color: #F4E7E1;
+}
+
+.input_section{
+    margin-top: 4px;
+}
+
+#todolist{
+    width:370px;
+}
+
+#list{
+    border: 1px rgb(160, 76, 76) solid;
+    padding: 3px;
+    margin-top: 15px;
+    height: 1000px;
+    line-height: 25px;
+}
+
+.completed{
+     text-decoration: line-through; 
+     opacity: 0.6;
+}
+
+button{
+    cursor: pointer;
+    background-color: bisque;
+}
+button :active{
+    transform: scale(0.95);
+  background-color: #666;
+    
+}
+
+.tampilan{
+    background-color: #FFF2EB;
+}
+
+body{
+    background-color: #F4E7E1;
+}
+
+
+
+
+
+
