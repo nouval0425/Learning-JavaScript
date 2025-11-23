@@ -1,0 +1,39 @@
+body {
+  background: #111; /* warna hitam elegan */
+  color: white;
+  font-family: "Poppins", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  text-align: center;
+  background: #1e1e1e;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2),
+              0 0 50px rgba(0, 255, 255, 0.1);
+  border: 2px solid cyan;
+}
+
+#day {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #00eaff;
+}
+
+#date {
+  font-size: 22px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+#time {
+  font-size: 55px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: cyan;
+}
