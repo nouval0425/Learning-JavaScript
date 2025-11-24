@@ -1,6 +1,7 @@
 let author =document.getElementById("author");
 let quotes =document.getElementById("quotes");
 let button =document.getElementById("button");
+let styles =["style1", "style2", "style3"]
 
 const quotesarray =[
     {
@@ -48,14 +49,44 @@ const quotesarray =[
 
 ];
 
-//fungsi untuk random code & tampilkan konten
-function generatecode(){
-    let random =Math.floor(Math.random()* quotesarray.length);
+function randombackground(){
+    let r =math.floor(math.random()*  256);
+    let g =math.floor(math.random()*  256);
+    let b =math.floor(math.random()*  256);
 
-    quotes.textContent =quotesarray[random].text;
-    author.textContent ="-" + quotesarray[random].author;
-
+document.body.style.backgroundColor=`rgb(${r}, ${g}, ${b})`;
 }
+
+//fungsi untuk random code & tampilkan konten &ganti warna
+function generatecode() {
+    let random = Math.floor(Math.random() * quotesarray.length);
+
+    // animasi fade
+    document.querySelector(".box").classList.add("fade");
+
+    setTimeout(() => {
+        quotes.textContent = quotesarray[random].text;
+        author.textContent = "- " + quotesarray[random].author;
+
+        // reset style lama
+        quotes.className = "";
+        author.className = "";
+
+        // pilih style random
+        let randomStyle = styles[Math.floor(Math.random() * styles.length)];
+
+        // pasang style baru
+        quotes.classList.add(randomStyle);
+        author.classList.add(randomStyle);
+
+        // animasi balik
+        document.querySelector(".box").classList.remove("fade");
+
+        randombackground();
+
+    }, 250);
+}
+
 
 button.addEventListener("click",generatecode);
 generatecode();

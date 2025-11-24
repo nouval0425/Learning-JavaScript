@@ -1,0 +1,90 @@
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ====== BODY ====== */
+body {
+  background: linear-gradient(135deg, #4c6ef5, #15aabf);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ====== QUOTE BOX ====== */
+.box {
+  width: 480px;
+  padding: 25px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  text-align: center;
+  transition: background 0.4s ease, transform 0.3s ease;
+}
+
+/* Animasi saat ganti quote */
+.box.fade {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: 0.3s;
+}
+
+#quotes {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+#author {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 20px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+/* ====== BUTTON ====== */
+#button {
+  background: #4263eb;
+  color: white;
+  padding: 10px 25px;
+  font-size: 17px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#button:hover {
+  background: #364fc7;
+  transform: scale(1.05);
+}
+
+#button:active {
+  transform: scale(0.95);
+}
+
+/* ====== RANDOM STYLE CLASSES ====== */
+
+/* Style 1: warna merah fresh */
+.style1 {
+  color: #ff4b4b;
+  letter-spacing: 1px;
+}
+
+/* Style 2: biru elegan */
+.style2 {
+  color: #4b9bff;
+  font-weight: bold;
+}
+
+/* Style 3: hijau neon */
+.style3 {
+  color: #39e75f;
+  text-shadow: 0 0 5px rgba(57, 231, 95, 0.4);
+}
