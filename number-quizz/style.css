@@ -1,0 +1,104 @@
+/* Reset default style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body styling */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+}
+
+/* Box utama */
+.box {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Judul */
+.box h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input angka */
+#input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #4e54c8;
+    margin-bottom: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#input:focus {
+    border-color: #8f94fb;
+    outline: none;
+    transform: scale(1.03);
+}
+
+/* Tombol TEBAK */
+#btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: #4e54c8;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+#btn:hover {
+    background: #3c41a7;
+    transform: scale(1.03);
+}
+
+/* Pesan */
+#pesan {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    height: 25px;
+    color: #222;
+}
+
+/* Tombol reset */
+#reset {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#reset:hover {
+    background: #d93636;
+    transform: scale(1.03);
+}
+
+/* Responsif untuk HP */
+@media (max-width: 400px) {
+    .box {
+        width: 90%;
+    }
+}

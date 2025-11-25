@@ -36,11 +36,12 @@ if (isNaN(guess)) {
 
 btnclick.addEventListener("click", cektebakan)
 
-btnreset.addEventListener("click",function(){
-    let randomnumber = Math.floor(Math.random() * 10) + 1;
-    percobaan=0;
-    pesan.textContent=" ";
-    document.getElementById("input")=" ";
-    btnclick.disabled=false;
-})
+btnreset.addEventListener("click", function(){
+    randomnumber = Math.floor(Math.random() * 10) + 1; // TANPA let
+    percobaan = 0;
+    pesan.textContent = "";
+    document.getElementById("input").value = ""; // ini yang benar
+    btnclick.disabled = false;
+});
+
 
