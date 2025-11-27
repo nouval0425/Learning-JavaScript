@@ -1,0 +1,138 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*reset css*/
+
+.box{
+    display: flex;
+    gap: 20px;
+    font-size: 40px;
+    margin: 5px;
+    
+}
+
+button{
+    width: 100%;
+    height: 30px;
+}
+
+/*merah*/
+#merah{
+background-color: rgba(228, 13, 13, 0.215);
+display:block;
+border: 1px black solid;
+}
+
+#merah button{
+    background-color: rgb(255, 5, 5);
+}
+
+/*kuning*/
+#Kuning{
+background-color: rgba(160, 216, 18, 0.283);
+display:block;
+border: 1px black solid;
+}
+
+#Kuning button{
+    background-color: rgb(226, 255, 5);
+}
+
+/*hijau*/
+#Hijau{
+background-color: rgba(13, 228, 56, 0.215);
+display:block;
+border: 1px black solid;
+}
+
+#Hijau button{
+    background-color: rgb(5, 255, 76);
+}
+
+/*biru*/
+#Biru{
+background-color: rgba(49, 13, 228, 0.215);
+display:block;
+border: 1px black solid;
+}
+
+#Biru button{
+    background-color: rgb(55, 5, 255);
+}
+
+/*pink*/
+#pink{
+background-color: rgba(228, 13, 163, 0.215);
+display:block;
+border: 1px black solid;
+}
+
+#pink button{
+    background-color: rgb(255, 5, 209);
+}
+
+/*hitam*/
+#hitam{
+background-color: rgba(0, 0, 0, 0.322);
+display:block;
+border: 1px black solid;
+color: white;
+}
+
+
+#hitam button{
+    background-color: rgb(9, 1, 1);
+    color: white;
+}
+
+/*random*/
+#random{
+background-color: rgba(172, 184, 185, 0.338);
+display:block;
+border: 1px black solid;
+}
+
+#random button{
+    background-color: rgb(153, 126, 126);
+}
+
