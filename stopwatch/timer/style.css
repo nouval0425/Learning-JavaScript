@@ -1,0 +1,83 @@
+/* Reset Default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+/* Box stopwatch */
+.box {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    width: 320px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Display */
+#display {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    color: #e2e8f0;
+}
+
+/* Tombol */
+button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    width: 80px;
+    font-weight: 600;
+}
+
+/* Tombol efek */
+#start {
+    background: #10b981;
+    color: white;
+}
+#start:hover {
+    background: #059669;
+    transform: scale(1.06);
+}
+
+#stop {
+    background: #ef4444;
+    color: white;
+}
+#stop:hover {
+    background: #dc2626;
+    transform: scale(1.06);
+}
+
+#reset {
+    background: #3b82f6;
+    color: white;
+}
+#reset:hover {
+    background: #2563eb;
+    transform: scale(1.06);
+}
+
+/* Animasi kecil ketika menekan tombol */
+button:active {
+    transform: scale(0.95);
+}
