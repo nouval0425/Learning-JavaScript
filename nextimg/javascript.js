@@ -28,8 +28,8 @@ next.addEventListener("click",()=>{
 prev.addEventListener("click",()=>{
     index--;
 
-    if(index > image.length -1){
-        index =0;
+    if(index < 0){
+        index = image.length -1;
     }
     updateimg();
 })
