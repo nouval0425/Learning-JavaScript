@@ -9,11 +9,18 @@ let image=[
     "ui.jpg"
 ]
 
+let ucapan =[
+    "my istri",
+    "aduh my istri lagi",
+    "my favorite film",
+    "ini kah my..."
+]
+
 let index = 0 ;
 
 function updateimg(){
 gambar.src=image[index];
-
+document.getElementById("caption").textContent=ucapan[index];
 }
 
 next.addEventListener("click",()=>{
