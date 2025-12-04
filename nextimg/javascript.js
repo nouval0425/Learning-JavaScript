@@ -21,7 +21,15 @@ let index = 0 ;
 function updateimg(){
 gambar.src=image[index];
 document.getElementById("caption").textContent=ucapan[index];
+
 }
+let autoslide = setInterval(() =>{
+ next.click()
+},3000);
+
+
+
+
 
 next.addEventListener("click",()=>{
     index++;
