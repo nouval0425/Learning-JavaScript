@@ -30,6 +30,8 @@ body {
     width: 350px;
 }
 
+
+
 /* Gambar */
 #gambar {
     width: 100%;
@@ -83,4 +85,90 @@ button:active {
     backdrop-filter: blur(3px);
     transition: 0.3s ease;
 }
+
+/* Container gambar + tombol */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Atur gambar agar masuk wrapper */
+.image-wrapper img {
+    width: 100%;
+    height: 220px;
+    border-radius: 15px;
+}
+
+/* Tombol Prev & Next */
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    background: rgba(255,255,255,0.4);
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.slide-btn:hover {
+    background: rgba(255,255,255,0.7);
+}
+
+/* kiri */
+#prev {
+    left: 10px;
+}
+
+/* kanan */
+#next {
+    right: 10px;
+}
+/* Bungkus tombol dengan posisi absolute */
+.box {
+    position: relative;
+}
+
+/* Gambar tetap seperti biasa */
+#gambar {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Override button default */
+#next, #prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 14px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    transition: .3s;
+    font-size: 18px;
+    width: auto;       /* Hapus width 100% */
+}
+
+#next:hover, #prev:hover {
+    background: rgba(255,255,255,0.7);
+}
+
+/* Tombol kiri */
+#prev {
+    left: 10px;
+}
+
+/* Tombol kanan */
+#next {
+    right: 10px;
+}
+
 
