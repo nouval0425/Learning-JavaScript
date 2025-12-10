@@ -1,65 +1,74 @@
-let textlist =document.getElementById("todolist");
-let btntambah =document.getElementById("tambah");
-let list =document.getElementById("list");
+let textlist = document.getElementById("todolist");
+let btntambah = document.getElementById("tambah");
+let list = document.getElementById("list");
 
+// --- Load data ketika halaman dibuka ---
+loadTodo();
 
-loadTodo(); 
-
-btntambah.addEventListener("click",()=>{
+btntambah.addEventListener("click", () => {
     addTodo();
-})
+});
 
-function addTodo(){
-    let text=textlist.value; //mengambil nilai dari input
+function addTodo() {
+    let text = textlist.value.trim(); //ambil text input
     
-    if(text ===" ")return;
+    if (text === "") return;
 
-    let donebtn=document.createElement("donebtn");//membuat elemen bari di javasript untuk donebtn
-    donebtn.textContent="✅";//mengatur konten donebtn
-    donebtn.style.marginLeft="10px";//mengatur tata letak
+    let li = createTodoElement(text);
+    list.appendChild(li);
 
-    let deletebtn =document.createElement("deletebtn");
-    deletebtn.textContent="❌";
-    deletebtn.style.marginLeft="20px";
+    saveTodo();
+    textlist.value = "";
+}
 
-    deletebtn.addEventListener("click",()=>{
-        list.removeChild(li);
-        save();
-    })
+// --- Fungsi membuat element to-do ---
+function createTodoElement(text) {
+    let li = document.createElement("li");
+    li.textContent = text;
 
-    donebtn.addEventListener("click",()=>{
+    // Tombol selesai
+    let donebtn = document.createElement("button");
+    donebtn.textContent = "✅";
+    donebtn.style.marginLeft = "10px";
+
+    donebtn.addEventListener("click", () => {
         li.classList.toggle("completed");
-        save();
-    })
-    
-    let li=document.createElement("li"); //membuat elemen li
-    li.textContent = text //isi text dari input
+        saveTodo();
+    });
 
-    li.appendChild(deletebtn);//menambahkan deletebtn
-    li.appendChild(donebtn);//menambahkan done btn 
-    list.appendChild(li);//menambahkan ke list
+    // Tombol hapus
+    let deletebtn = document.createElement("button");
+    deletebtn.textContent = "❌";
+    deletebtn.style.marginLeft = "20px";
 
+    deletebtn.addEventListener("click", () => {
+        list.removeChild(li);
+        saveTodo();
+    });
 
-    textlist.value=" ";
-  
+    // Masukkan tombol ke li
+    li.appendChild(deletebtn);
+    li.appendChild(donebtn);
+
+    return li;
 }
 
-//untuk menyimpan data
-function save(){
-let todos=[];
-let items =list.querySelectorAll("li")
+// --- Simpan seluruh list ke localStorage ---
+function saveTodo() {
+    let todos = [];
+    let items = list.querySelectorAll("li");
 
-items.forEach(li =>{
-    todos.push({
-        text:li.childNodes[0].nodeValue.trim(),
-        completed:li.classList.contains("completed")
-    })
-})
-localStorage.setItem("todoData",JSON.stringify(todos))
+    items.forEach(li => {
+        todos.push({
+            text: li.childNodes[0].nodeValue.trim(),
+            completed: li.classList.contains("completed")
+        });
+    });
+
+    localStorage.setItem("todoData", JSON.stringify(todos));
 }
 
-
-//untuk menampikan data
+// --- Load dari localStorage ---
 function loadTodo() {
     let data = localStorage.getItem("todoData");
 
@@ -77,4 +86,3 @@ function loadTodo() {
         list.appendChild(li);
     });
 }
-
