@@ -3,6 +3,7 @@ let btntambah =document.getElementById("tambah");
 let list =document.getElementById("list");
 
 
+loadTodo(); 
 
 btntambah.addEventListener("click",()=>{
     addTodo();
@@ -23,10 +24,12 @@ function addTodo(){
 
     deletebtn.addEventListener("click",()=>{
         list.removeChild(li);
+        save();
     })
 
     donebtn.addEventListener("click",()=>{
         li.classList.toggle("completed");
+        save();
     })
     
     let li=document.createElement("li"); //membuat elemen li
@@ -38,6 +41,40 @@ function addTodo(){
 
 
     textlist.value=" ";
+  
 }
 
+//untuk menyimpan data
+function save(){
+let todos=[];
+let items =list.querySelectorAll("li")
+
+items.forEach(li =>{
+    todos.push({
+        text:li.childNodes[0].nodeValue.trim(),
+        completed:li.classList.contains("completed")
+    })
+})
+localStorage.setItem("todoData",JSON.stringify(todos))
+}
+
+
+//untuk menampikan data
+function loadTodo() {
+    let data = localStorage.getItem("todoData");
+
+    if (!data) return;
+
+    let todos = JSON.parse(data);
+
+    todos.forEach(item => {
+        let li = createTodoElement(item.text);
+
+        if (item.completed) {
+            li.classList.add("completed");
+        }
+
+        list.appendChild(li);
+    });
+}
 
