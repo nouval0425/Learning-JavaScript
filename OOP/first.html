@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+<body>
+    <script>
+
+//untuk membuat consturktor di js itu seperti membuat function 
+//ini adalah contoh constructor dengan parameter
+function person(FirstName,LastName){
+this.FirstName=FirstName;
+this.LastName=LastName;
+this.sayHello=function (name){
+    console.info(`nama saya ${this.FirstName} halo ${name}`)
+}
+}
+
+//beginilah cara membuat object dengan constructor
+//gunakan kata kunci new namafunsctionnya();
+let agi =new person("Nouval","al Ghifary")
+agi.sayHello("sattria")
+
+let satria=new person("satria","baja")
+satria.sayHello("Nouval")
+    
+console.log(agi);
+console.log(satria);
+
+    </script>    
+</body>
+</html>
