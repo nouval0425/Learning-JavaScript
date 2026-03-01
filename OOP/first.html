@@ -29,6 +29,29 @@ satria.sayHello("Nouval")
 console.log(agi);
 console.log(satria);
 
+//construktor inheritence
+//menggunakan struktur namafunsctionnya.call(this, parameter)
+
+function Employee(LastName){
+this.LastName=LastName;
+this.sayHello=function (name){
+    console.info(`nama saya ${this.FirstName} halo ${name}`)
+}
+}
+
+//berikut contohnya
+function Manager(FirstName,LastName){
+this.FirstName=FirstName;
+Employee.call(this, LastName) // ini adalah caara nya
+
+}
+
+let uyuk =new Manager("uyuk","sikumbang");
+console.info(uyuk);
+
+let upin = new Manager("upin","simanjubtak");
+console.info(upin);
+
     </script>    
 </body>
 </html>

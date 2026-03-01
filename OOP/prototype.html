@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+
+    <script>
+//untuk prototype itu kerjanya seperti inheritence atau pewarisan 
+//setiap function pasti memiliki prototype dengan dituliskan __proto__
+//cara kerjanya adalah js akan mengecek terlebih dahulu apakah property ada diluar proto jika tidak maka akan masuk ke proto dan seterusnya
+function person(FirstName,LastName){
+this.FirstName=FirstName;
+this.LastName=LastName;
+this.sayHello=function (name){
+    console.info(`nama saya ${this.FirstName} halo ${name}`)
+}
+}
+
+//cara menambahkan property pada proto
+person.prototype.sayBye=function(name){
+    console.info(`good bye ${name}`)
+}
+
+person.prototype.run=function(){
+    console.info(`RUNNN ${this.FirstName}`)
+}
+
+let agi =new person("Nouval","al Ghifary")
+agi.sayHello("sattria")
+
+let satria=new person("satria","baja")
+satria.sayHello("Nouval")
+    
+console.log(agi);
+console.log(satria);
+
+agi.sayBye("satria");
+agi.run();
+
+
+
+    </script>
+    
+</body>
+</html>
