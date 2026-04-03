@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+   <Script>
+//untuk membuat class pada js gunakan kata kunci class
+//dan untuk membuat constructor didalam class gunakan kata kunci constructor
+
+
+class person{
+    constructor(name){
+        this.name=name;
+    }
+//membuat method di dalam class
+    sayHello(name){
+        console.info(`hello ${name}, my name is ${this.name}`);
+    }
+
+}
+
+const agi =new person("nopal")
+console.info(agi);
+agi.sayHello("aziz");
+
+const kagura =new person("kagura");
+console.info(kagura);
+kagura.sayHello("balmond");
+
+//dalam js untuk membuat pewarisan dibutuhkan kata kunci extends 
+class officer{
+    constructor(firstname){
+        this.firstname=firstname;
+    }
+
+    sayGoodBye(name){
+        console.info(`my name is ${this.firstname} good bye ${name}`)
+    }
+}
+
+class manager extends officer{ //ini merupakan bentuk pewarisan
+    constructor(firstname,lastname){
+        super(firstname);   //untuk constructor menggunakan super di pewarisan
+        this.lastname=lastname;
+    }
+
+}
+
+    const ainur =new officer("ainur");
+    console.info(ainur);
+    ainur.sayGoodBye("nopal")
+
+    const carmen =new manager("carmen");
+    console.info(carmen);
+    ainur.sayGoodBye("euyeo")
+
+//getter dan setter pada js
+
+class hero{
+    constructor(name, role){
+        this.name=name;
+        this.role=role;
+
+    }
+
+    get herorole(){
+        return `that's hero name is ${this.name} his role is ${this.role}`
+    }
+
+    set fullnamehero(value){
+            const hasil =value.split(" "); //memecah string dengan array
+            this.name=hasil[0];//index pertama
+            this.role=hasil[1];//index kedua
+    }
+}
+
+    const llylya =new hero("llylya", " mage")
+    console.info(llylya);
+    console.info(llylya.herorole);
+   </Script> 
+</body>
+</html>
