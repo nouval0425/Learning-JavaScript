@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static variabel dan static method</title>
+</head>
+<body>
+    <script>
+        //static digunakan untuk membuat property atau method menjadi global
+        //dengan static tidak perlu lagi membuat object
+
+//-----------------static method-------------------     
+    //tanpa static
+    class penjumlahan{
+        tambah(...numbers){
+            let total = 0;
+            for (const number of numbers) {
+                total += number;
+            }
+            return total;
+        }
+
+    }
+//perlu instalasi object
+    let misal1 = new penjumlahan()
+    console.log(misal1.tambah(1,1,1,1))
+
+
+//dengan static
+    class pengurangan{
+        static kurang(...numbers){
+            let total = 0;
+            for (const number of numbers) {
+                total -= number;
+            }
+            return total;
+        }
+
+    }
+
+   //langsung melakukan pengurangan tanpa harus instalasi object
+   //           class_name.method in class
+   console.log(pengurangan.kurang(2,3,4));
+    
+//-----------------static method dengan pewarisan----------------
+
+class buah{
+    static info(){
+        return `buah itu enak`
+    } 
+}
+
+class jeruk extends buah{
+    static info(){
+        return `jeruk enak`
+    }
+}
+
+console.log(buah.info())
+console.log(jeruk.info())
+
+//----------------------static di pakai di pembuatan object---------------
+//dengan static
+class sekolah{
+    static nama="smpn 4"
+}
+
+console.log(sekolah.nama);
+
+//tanpa static
+class school{
+     ism="smpn 10"
+}
+
+let murid =new school();
+console.log(murid.ism)
+    </script>
+    
+</body>
+</html>
