@@ -6,8 +6,8 @@
     <title>EROR</title>
 </head>
 <body>
-    <Script>
-    //eror try and catch
+    <Script>    
+//-----------------------------eror try and catch
          function cekNilai(angka){
             try{
                 if (angka < 50){
@@ -25,9 +25,22 @@
      //dalam eror dan catch ada kata kunci bernaman finally
      //finally itu pasti dijalankan walaupun program eror
 
+//--------------------eror in real case
+         try{
+            let input ="abc";
+            let angka = Number(input);
 
+            if(isNaN(angka)){
+                throw new Error("input harus angka");
+            }
+        console.log("angka ", angka)
+         }catch{
+            console.log("eror",Error.message);
+            
+            
+         }
 
-    //throw eror 
+//---------------------------throw eror 
     //jika terdapat eror maka outputnya bukan lah string melainkan eror dan program langsung dihentikan setleah mendapat eror
         function cekIPK(nilai){
             if (nilai < 50){
