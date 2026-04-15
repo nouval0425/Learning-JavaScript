@@ -7,6 +7,26 @@
 </head>
 <body>
     <Script>
+    //eror try and catch
+         function cekNilai(angka){
+            try{
+                if (angka < 50){
+                    throw new Error(`${angka} tidak lulus`)
+                }  
+                return "lulus";              
+            }catch(Error){
+                return Error.message;
+            }
+         }
+    
+     console.log(cekNilai(40))
+     console.log(cekNilai(60))
+     
+     //dalam eror dan catch ada kata kunci bernaman finally
+     //finally itu pasti dijalankan walaupun program eror
+
+
+
     //throw eror 
     //jika terdapat eror maka outputnya bukan lah string melainkan eror dan program langsung dihentikan setleah mendapat eror
         function cekIPK(nilai){
