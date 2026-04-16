@@ -6,7 +6,45 @@
     <title>EROR</title>
 </head>
 <body>
-    <Script>    
+    <Script>
+
+//----------------create error class
+//even error has his self class but for the eficient program we have to create error class for diffrent case
+
+class validationerror extends Error{
+    constructor(message,field){
+        super(message);
+        this.field = field;
+    }
+}
+
+class mathutil{
+    static sum(...numbers){
+
+        if(numbers.length === 0){
+            throw new validationerror("Total must more than 0","number") //dipakai disni saat melakukan throw
+        }
+        let total=0
+        for(const number of numbers ){
+            total +=number;
+        }
+        return total;
+    }
+}
+
+try{
+    console.log(mathutil.sum()) //error karena nilainya 0
+}catch(error){
+    if (error instanceof validationerror){
+        console.log(`terjadi error di field ${error.field} dengan error : ${error.message}`)
+    }else{
+        console.log(`terjadi error : ${error.message}`)
+    }
+
+}
+
+    
+
 //-----------------------------eror try and catch
          function cekNilai(angka){
             try{
@@ -26,6 +64,7 @@
      //finally itu pasti dijalankan walaupun program eror
 
 //--------------------eror in real case
+         
          try{
             let input ="abc";
             let angka = Number(input);
@@ -33,11 +72,10 @@
             if(isNaN(angka)){
                 throw new Error("input harus angka");
             }
+
         console.log("angka ", angka)
          }catch{
-            console.log("eror",Error.message);
-            
-            
+            console.log("eror",Error.message);  
          }
 
 //---------------------------throw eror 
