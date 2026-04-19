@@ -9,6 +9,8 @@
    <script>
 //Iterable dan iterator adalah sebuah kontract yang bertujuan untuk melakukan perulangan for of dengan kata kunci next()
 //untuk iterable dan iterator sendiri biasanya dilakukan pada bahasa typescript
+
+    //iterator
     class CounterIteratorResult{
         constructor(value,done){
         this.value = value;
@@ -33,6 +35,23 @@
             this.value++;
         }
        } 
+    }
+
+    //iterable
+    class Counter{
+        constructor(Nilai, maximal){
+            this.Nilai=Nilai;
+            this.maximal=maximal;
+        }
+        [Symbol.iterator](){
+            return new CounterIterator(this.Nilai, this.maximal);
+        }
+    }
+
+    //penggunaannya pada for of
+    const Nilai =new Counter(1,25);
+    for (const element of Nilai) {
+        console.info(element);
     }
 
    </script> 
