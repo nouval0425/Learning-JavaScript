@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+    
+    {
+    //array sendiri punya method untuk pengulangan array dengan for each
+        const kumpulan=[1,2,3,4,5,6,7,8,1];
+
+        kumpulan.forEach(function(value, index){
+            console.info(`${index} : ${value}`)
+        }) // dengan anonymus function
+
+        kumpulan.forEach((value, index) =>{
+            console.info(`${index} : ${value}`)
+        }) //dengan arrow function
+
+    }
+
+    {
+        //array queue sifatnya FIFO (first in first out)
+    
+        const queue=[]
+
+        queue.push("Nouval")
+        queue.push("Al")
+        queue.push("Ghifary")
+
+    //utk manggilnya dengan kata kunci shift
+        console.info(queue.shift())
+        console.info(queue.shift())
+        console.info(queue.shift())
+        console.info(queue.shift()) //undifined
+    }
+
+    {
+        //array stack sifatnya lIFO (last in first out)
+    
+        const stack=[]
+
+        stack.push("Nouval")
+        stack.push("Al")
+        stack.push("Ghifary")
+
+    //utk manggilnya dengan kata kunci pop
+        console.info(stack.pop())
+        console.info(stack.pop())
+        console.info(stack.pop())
+        console.info(stack.pop())
+    }
+
+    {
+    //array search
+        const sumber =[1,2,3,4,5,1,2,3,4,5]
+
+        console.info(sumber.find(value => value > 4))
+        console.info(sumber.findIndex(value => value > 4))
+        console.info(sumber.includes(2))
+        console.info(sumber.indexOf(3))
+        console.info(sumber.lastIndexOf(5))//mencari index terkahir
+
+
+    }
+
+
+    </script>    
+</body>
+</html>
