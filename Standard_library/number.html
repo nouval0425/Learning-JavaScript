@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+</head>
+<body>
+    <script>
+//number memiliki beberapa property bisa dibaca di dokumentasi nya
+//terdapat static property, static method
+
+//Untuk deklarasi number
+        const angka =Number("123456789")
+
+        const value ="12345";
+        const number =Number(value);
+        console.info(typeof value)
+        console.info(typeof number)
+        console.info(number)
+
+       //CONTOH PROPERTY YANG ADA DI NUMBER 
+        console.info(`MAX VALUE NUMBER : ${Number.MAX_VALUE}`)
+        console.info(`MIN VALUE NUMBER : ${Number.MIN_VALUE}`)
+        console.info(Number.MAX_SAFE_INTEGER)
+        console.info(Number.MIN_SAFE_INTEGER)
+
+    //CONTOH STATIC METHOD DI NUMBER
+        const none =Number("12002021")
+        console.info(Number.isInteger(none)) //check apakah none itu number
+        console.info(Number.isNaN(none)) //check apakah none itu bukan number?
+
+    //CONTOH METHOD
+        const dune = Number("123455")
+        console.info(dune.toString(2)) //untuk merubah jadi binary code atau apapun itu
+        console.info(dune.toLocaleString("id-ID")) // KE INDONESIA
+        console.info(dune.toLocaleString("en-US")) // KE UNITED STATES
+
+    </script>
+</body>
+</html>
