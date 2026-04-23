@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+
+        //object freeze = tidak bisa diubah
+        //object juga memiliki static methode dan atributnya juga
+
+       { 
+        const person ={
+            firstname :"nouval",
+            lastname : "ghifary"
+        };
+
+        Object.freeze(person); //untuk deklarasi nya seperti ini 
+
+        //tidak bisa diubah dan dihapus karena object frezee
+        person.firstname ="Agy";
+        delete person.lastname;
+
+        console.info(person);
+    }
+
+    {
+        const nama ={
+            first:"noel",
+            last:"galagher"
+        }
+
+        Object.seal(nama);
+
+        nama.first ="Agy";
+       delete nama.last;
+
+        console.info(nama);
+
+
+    }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
