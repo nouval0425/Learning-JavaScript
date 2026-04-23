@@ -63,7 +63,42 @@
         console.info(sumber.includes(2))
         console.info(sumber.indexOf(3))
         console.info(sumber.lastIndexOf(5))//mencari index terkahir
+    }
 
+    {
+        //array filter
+
+       const numbers = [1,2,3,4,5,6,7,8,9]
+       const genap = numbers.filter(value => value %2 === 0) //dengan menggunakan kata kunci filter 
+       const gannjil = numbers.filter(value => value %2 === 1)
+
+       console.info(numbers);   
+       console.info(genap);
+       console.info(gannjil);
+    }
+
+    {
+        //array transform
+        //untuk array transform ada 3 macam
+        //hasil dari array transform itu return hasil bukan array
+
+            const name =["nouval", "al", "ghifary"]
+            const nameupper =name.map(value => value.toUpperCase()); //utk menggabubgkan array
+            console.info(name);
+            console.info(nameupper);
+
+        // array reduce(utk menggabungkan nilai array) dan reduceright (sama namun dari kanan / belakang)  
+
+            const namesreduce =name.reduce((before, value)=>before.toUpperCase() + " " + value.toUpperCase());
+            console.info(namesreduce);
+
+        //reduceright
+            const nameright =name.reduceRight((before, value)=>before.toUpperCase() + " " + value.toUpperCase());
+            console.info(nameright);
+
+            const numbers =[1,2,3,4,5,6,7,8,9]
+            const jumlah =numbers.reduce((before, value)=> before + value);
+            console.info(jumlah);
 
     }
 
