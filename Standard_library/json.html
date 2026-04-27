@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+//json = javascript object notation
+//digunakan dalam server dan client
+
+const person ={
+    first:"noel",
+    last:"galagher",
+    adress :{
+        kota : "london",
+        negara : "United statue"
+    },
+    hobies : "singing"
+}
+
+const json =JSON.stringify(person) //konversi dari object ke string json
+const string =JSON.parse(json)//kebalikannya
+
+console.info(json)
+console.info(string)
+
+
+
+    </script>
+</body>
+</html>

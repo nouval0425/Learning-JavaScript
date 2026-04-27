@@ -32,6 +32,7 @@
             last:"galagher"
         }
 
+//seal itu bisa diubah object nya namun tidak dapat dihapus
         Object.seal(nama);
 
         nama.first ="Agy";
@@ -42,6 +43,29 @@
 
     }
 
+{
+    //object assign
+    //kadang kita memnggabungkan object
+
+    const target ={firstname : "nopal"};
+    const source ={lastname : "ghifary"}
+
+    Object.assign(target,source) //source digabung ke target
+    console.info(target)
+
+}
+{
+    //static method object values dan get propertvalues
+
+    const person ={
+        firsname : "nopal",
+        middlename : "al",
+        lastname : "ghifary"
+    }
+
+    console.info(Object.values(person)) //menampilkan nilainya
+    console.info(Object.getOwnPropertyNames(person)) //menampilkan nama properties nya
+}
 
 
 
