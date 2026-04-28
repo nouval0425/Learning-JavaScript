@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Module</title>
+    <script type="module" src="script/library.mjs"></script>
+</head>
+<body>
+    <script type="module">
+    //js dengan module brarti mengexport dan import class / function dari file library nya
+    //export digunakan supaya function / dll bisa dipakai = dipakai di file module js
+    //import digunakan supaya filenya dapat dipakai seluruhnya = dipakai di file html kita
+    //untuk mendefinisikan module hanya dengan menggunakan kata kunci type di tag <script>
+
+    //tambah import
+    import {saywallahi,saygoodbye} from "./script/library.mjs"
+
+        saywallahi("asep") //berhasil di run di web server
+        saygoodbye("ucok") //berhasil
+
+    </script>
+</body>
+</html>
