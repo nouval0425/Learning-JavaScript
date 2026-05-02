@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Halo Kawan</h1>
+    <ul id="menu">
+        <li id="pertama">first</li>
+        <li id="kedua">second</li>
+        <li id="ketiga">third</li>
+    </ul>
+    <script>
+    //DOM itu adalah document object manipulationn
+    //didalmnya juga ada tipe data tapi tidak banyak
+    //salah satu tipe datanya document
+    //Document itu representasi halaman web dan dengan DOM kita bisa memanipilasinya
+
+    console.info(document);
+
+    //document punya banyak atribut
+    console.info(document.title)
+    console.info(document.head)
+    console.info(document.body)
+    console.info(document.images)
+    console.info(document.contentType)
+
+    //document bisa mengambil id dengan getelemmenyby id dari HTML
+    console.info(document.getElementById("h1"))
+
+    const menu = document.getElementById("menu")
+    console.info(menu)
+
+    const kedua =document.getElementById("kedua")
+        console.info(kedua)
+
+
+    </script>
+</body>
+</html>
