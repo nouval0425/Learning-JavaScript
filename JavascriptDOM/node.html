@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node</title>
+</head>
+<body>
+
+    <ul id="menu">
+        <li id="first">first</li>
+        <li id="second">second</li>
+        <li id="third">third</li>
+    </ul>
+
+    <script>
+//node itu seperti parents dan child
+//digunakan untuk memanipulasi parent / child dari element html
+//contohnya
+
+const menu =document.getElementById("menu")
+console.info(menu)
+
+const third =document.getElementById("third")
+console.info(third)
+
+    //dalam node juga memilik banyak sekali atributnya baca di dokumnetasi node
+//menu
+console.info(menu.childNodes);
+
+//second
+const second = document.getElementById("second")
+console.info(second)
+console.info(second.previousSibling)//akan keluar text jika pada list terdapat enter
+console.info(second.nextSibling.nextSibling )//dua kali
+
+//method di node
+//banyak sekali methd di node tinggal kita yang rajin baca dokumnetsinya
+
+console.info(menu)
+menu.removeChild(third)//untuk remove
+menu.removeChild(document.getElementById("first"))
+    </script>
+    
+</body>
+</html>
