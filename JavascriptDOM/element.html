@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element</title>
+</head>
+<body>
+    <h1 id="selamat"></h1>
+    <p id="hari"></p>
+
+<div id="content">
+    <h2 id="birthday">selamat ulang tahun</h2>
+    <p id="person">unutk kamu yang sdang tambah umur</p>
+</div>
+
+<div id="isi" class="fill"></div>
+
+    <script>
+//elemment merupakan child dari node atau bisa dibilang node adalah parent element
+//elemnt seperti yang kita tau dapat ditemukan pada tag html <head><body> dll
+    //contoh
+    //untuk menambahlan konten di tag yang dituju
+    const selamat =document.getElementById("selamat")
+    selamat.textContent ="selamat datang"
+
+    const day =document.getElementById("hari")
+    day.textContent="hari raya idul fitri"
+
+    //element property
+    const content =document.getElementById("content")
+
+    console.info(content.id)
+    console.info(content.className)
+    console.info(content.tagName)
+
+    //method element
+    const birthday =document.getElementById("birthday")
+    birthday.remove();//untuk mengahpus tag itu sendiri
+    document.getElementById("person").remove();
+
+    //create element in DOM javascript
+    //di element / DOM kita juga bisa mebuat element baru
+    const isi =document.getElementById("isi")
+
+    const judul =document.createElement("h1")
+    judul.textContent ="Selamat hari buruh Nasional"
+    isi.appendChild(judul)
+
+    const description =document.createElement("p")
+    description.textContent ="selamat salam semuanya"
+    isi.appendChild(description)
+
+    
+
+    </script>
+    
+</body>
+</html>
