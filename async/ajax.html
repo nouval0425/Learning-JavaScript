@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AJAX</title>
 </head>
 <body>
     
+<h1 id="header"></h1>
+    <script>
+//ajax ini digunakan untuk mengirimkan data ke url lain
+//untuk membuat ajax kita perlu menggunakan class xmlhttprequest
+//belajar http request
+
+const ajax = new XMLHttpRequest();
+ajax.open("GET", "api/hello.json")
+ajax.send()
+
+//kita dapa menerima pesan dari url lain menggunakan ajax dan menampilkannya di laman web 
+//perlu menggunakan addevent listener yg kategorinya load
+ajax.addEventListener("load", function(){
+    const json=JSON.parse(ajax.responseText);
+    const response =document.getElementById("header")
+    response.textContent=json.reposons;
+    document.body.appendChild(response);
+})
+ajax.send()
+
+    </script>
+
 </body>
 </html>
