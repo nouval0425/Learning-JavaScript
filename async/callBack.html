@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Back</title>
+</head>
+<body>
+    <h1 id="header"></h1>
+    <br>
+    <h2 id="date"></h2>
+    <script>
+//pada dasarnya program js itu dijalankan dari baris ke baris secaara beraturan dari atas namun kita bisa memanipulasi urutan tersebut jadi kita bisa menjalankan program js tanpa mempedulikan urutan dinamakan async
+//beberapa aksi di dalamnya yaitu callback yang digunakan untuk mengatur waktu muncul dan waktu berjalannya
+
+function muncul(){
+    let header = document.getElementById("header");
+    header.textContent="hello agie ciluk baa.."
+
+    document.body.appendChild(header);
+}
+
+//untuk set timeout
+setTimeout(muncul,5000)
+
+function tgl(){
+    let tanggal =document.getElementById("date")
+    tanggal.textContent=new Date().toString();
+
+}
+
+    setInterval(tgl,1000)
+
+    </script>
+
+</body>
+</html>
