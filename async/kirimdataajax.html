@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sending Data with ajax</title>
+</head>
+<body>
+    <form>
+        <label for="username">Username :</label>
+        <input type="text" id="username" name="username">
+        <br>
+         <label for="password">Password :</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <input type="button" value="submit" id="submit">
+    </form>
+
+    <script>
+//disini kita akan belajar untuk mengirim data ke server dari web client dengan ajax
+//untuk mengirimkan data maka pada method send gunakan parameter walapun parameter ini opsional
+//dan gunakan post
+//disisni kita menggunakan server dari web pipedream
+    function dologin(){
+            const ajax=new XMLHttpRequest();
+            ajax.open("POST","https://eokhgl0nkzun28e.m.pipedream.net")
+            
+            ajax.onload=function(){
+                console.info(ajax.responseText);
+            }
+            ajax.setRequestHeader("content-type","application/json")
+            ajax.send(JSON.stringify({
+                username : document.getElementById("username").value,
+                password : document.getElementById("password").value
+            }));
+        }
+
+        document.getElementById("submit").onclick=dologin;
+    </script>
+
+</body>
+</html>
