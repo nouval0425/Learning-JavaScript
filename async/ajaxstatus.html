@@ -17,6 +17,17 @@
         document.body.appendChild(header);
     }
        const ajax =new XMLHttpRequest();
+    //ajax memilik state
+    //ada 4 state untuk ajax
+    //0 = unsent
+    //1 = opened (ketika method open dipanggil)
+    //2 = send (ketika send dipanggil)
+    //3 = loading
+    //4 = done / selesai
+    ajax.onreadystatechange =function(){
+        console.info(`ready state change ${ajax.readyState}`)
+    }
+
 
        // ajax.open("GET", "api/hello.json");
        ajax.open("GET", "api/salah.json");
